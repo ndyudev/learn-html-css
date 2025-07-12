@@ -19,6 +19,17 @@
     border: 3px solid #8b918d;
     padding: 20px;
     border-radius: 5px;
+    margin: 0 20px;
+}
+
+.profile h3 {
+    background-color: #5d64e7;
+    border-radius: 3px;
+    width: 47%;
+    padding: 0 5px;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
 }
 
 .back-ground   {
