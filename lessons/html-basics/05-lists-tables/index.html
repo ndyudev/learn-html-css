@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Lists & Tables - Danh Sách & Bảng</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <link rel="stylesheet" href="../../assets/navigation.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>📋 Lists & Tables - Danh Sách & Bảng</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">🏠 Trang Chủ</a></li>
+                <li><a href="../04-links-images/">← Bài Trước</a></li>
+                <li><a href="../06-forms-inputs/">Bài Tiếp →</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="lesson-content">
+            <h1 class="lesson-title">05. Lists & Tables - Danh Sách & Bảng</h1>
+            
+            <div class="learning-objectives">
+                <h2>🎯 Mục Tiêu Học Tập (Learning Objectives)</h2>
+                <ul>
+                    <li>Hiểu cách sử dụng thẻ &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; cho danh sách</li>
+                    <li>Biết cách tạo danh sách lồng nhau (nested lists)</li>
+                    <li>Hiểu cách sử dụng thẻ &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</li>
+                    <li>Thực hành tạo bảng dữ liệu phức tạp với colspan, rowspan</li>
+                </ul>
+            </div>
+
+            <div class="theory-section">
+                <h2>📚 Lý Thuyết (Theory)</h2>
+                
+                <h3>1. Danh Sách Không Thứ Tự (&lt;ul&gt;)</h3>
+                <p><strong>Unordered List</strong> được sử dụng để tạo danh sách các mục không theo thứ tự cụ thể. Mỗi mục thường được hiển thị với dấu chấm (bullet points).</p>
+                
+                <div class="list-examples">
+                    <div class="list-example">
+                        <h4>📝 Cú Pháp Cơ Bản (Basic Syntax)</h4>
+                        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Mục thứ nhất&lt;/li&gt;
+    &lt;li&gt;Mục thứ hai&lt;/li&gt;
+    &lt;li&gt;Mục thứ ba&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        
+                        <div class="list-demo">
+                            <h5>Kết Quả:</h5>
+                            <ul class="demo-list">
+                                <li>Mục thứ nhất</li>
+                                <li>Mục thứ hai</li>
+                                <li>Mục thứ ba</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="list-example">
+                        <h4>🔄 Danh Sách Lồng Nhau (Nested Lists)</h4>
+                        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Mục chính 1
+        &lt;ul&gt;
+            &lt;li&gt;Mục con 1.1&lt;/li&gt;
+            &lt;li&gt;Mục con 1.2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Mục chính 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        
+                        <div class="list-demo">
+                            <h5>Kết Quả:</h5>
+                            <ul class="demo-list">
+                                <li>Mục chính 1
+                                    <ul>
+                                        <li>Mục con 1.1</li>
+                                        <li>Mục con 1.2</li>
+                                    </ul>
+                                </li>
+                                <li>Mục chính 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>2. Danh Sách Có Thứ Tự (&lt;ol&gt;)</h3>
+                <p><strong>Ordered List</strong> được sử dụng để tạo danh sách các mục theo thứ tự cụ thể. Mỗi mục được đánh số tự động.</p>
+                
+                <div class="ordered-list-examples">
+                    <div class="list-example">
+                        <h4>🔢 Cú Pháp Cơ Bản (Basic Syntax)</h4>
+                        <pre><code>&lt;ol&gt;
+    &lt;li&gt;Bước thứ nhất&lt;/li&gt;
+    &lt;li&gt;Bước thứ hai&lt;/li&gt;
+    &lt;li&gt;Bước thứ ba&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                        
+                        <div class="list-demo">
+                            <h5>Kết Quả:</h5>
+                            <ol class="demo-list">
+                                <li>Bước thứ nhất</li>
+                                <li>Bước thứ hai</li>
+                                <li>Bước thứ ba</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="list-example">
+                        <h4>🎯 Danh Sách Có Thuộc Tính (List Attributes)</h4>
+                        <pre><code>&lt;ol type="A" start="3"&gt;
+    &lt;li&gt;Mục A&lt;/li&gt;
+    &lt;li&gt;Mục B&lt;/li&gt;
+    &lt;li&gt;Mục C&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                        
+                        <div class="list-demo">
+                            <h5>Kết Quả:</h5>
+                            <ol type="A" start="3" class="demo-list">
+                                <li>Mục C</li>
+                                <li>Mục D</li>
+                                <li>Mục E</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>3. Danh Sách Mô Tả (&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;)</h3>
+                <p><strong>Description List</strong> được sử dụng để tạo danh sách các thuật ngữ và định nghĩa của chúng.</p>
+                
+                <div class="description-list-example">
+                    <h4>📖 Cú Pháp (Syntax)</h4>
+                    <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                    
+                    <div class="list-demo">
+                        <h5>Kết Quả:</h5>
+                        <dl class="demo-description-list">
+                            <dt>HTML</dt>
+                            <dd>HyperText Markup Language</dd>
+                            <dt>CSS</dt>
+                            <dd>Cascading Style Sheets</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <h3>4. Bảng Dữ Liệu (&lt;table&gt;)</h3>
+                <p><strong>Table</strong> được sử dụng để hiển thị dữ liệu dạng bảng với các hàng và cột.</p>
+                
+                <div class="table-structure">
+                    <h4>🏗️ Cấu Trúc Bảng (Table Structure)</h4>
+                    <div class="table-components">
+                        <div class="component">
+                            <h5>&lt;table&gt;</h5>
+                            <p>Thẻ chứa toàn bộ bảng</p>
+                        </div>
+                        
+                        <div class="component">
+                            <h5>&lt;thead&gt;</h5>
+                            <p>Phần đầu bảng (header)</p>
+                        </div>
+                        
+                        <div class="component">
+                            <h5>&lt;tbody&gt;</h5>
+                            <p>Phần thân bảng (body)</p>
+                        </div>
+                        
+                        <div class="component">
+                            <h5>&lt;tfoot&gt;</h5>
+                            <p>Phần cuối bảng (footer)</p>
+                        </div>
+                        
+                        <div class="component">
+                            <h5>&lt;tr&gt;</h5>
+                            <p>Hàng trong bảng (table row)</p>
+                        </div>
+                        
+                        <div class="component">
+                            <h5>&lt;th&gt;</h5>
+                            <p>Ô tiêu đề (table header)</p>
+                        </div>
+                        
+                        <div class="component">
+                            <h5>&lt;td&gt;</h5>
+                            <p>Ô dữ liệu (table data)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>5. Ví Dụ Bảng Cơ Bản</h3>
+                <div class="basic-table-example">
+                    <h4>📊 Bảng Đơn Giản (Simple Table)</h4>
+                    <pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tên&lt;/th&gt;
+            &lt;th&gt;Tuổi&lt;/th&gt;
+            &lt;th&gt;Thành Phố&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Nguyễn Văn A&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;Hà Nội&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Trần Thị B&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+            &lt;td&gt;TP.HCM&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                    
+                    <div class="table-demo">
+                        <h5>Kết Quả:</h5>
+                        <table class="demo-table">
+                            <thead>
+                                <tr>
+                                    <th>Tên</th>
+                                    <th>Tuổi</th>
+                                    <th>Thành Phố</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>25</td>
+                                    <td>Hà Nội</td>
+                                </tr>
+                                <tr>
+                                    <td>Trần Thị B</td>
+                                    <td>30</td>
+                                    <td>TP.HCM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h3>6. Thuộc Tính Nâng Cao</h3>
+                <div class="advanced-attributes">
+                    <div class="attribute-group">
+                        <h4>🔗 Colspan & Rowspan</h4>
+                        <p>Thuộc tính để gộp các ô trong bảng:</p>
+                        
+                        <div class="attribute-example">
+                            <h5>Colspan (Gộp Cột)</h5>
+                            <pre><code>&lt;td colspan="2"&gt;Nội dung gộp 2 cột&lt;/td&gt;</code></pre>
+                        </div>
+                        
+                        <div class="attribute-example">
+                            <h5>Rowspan (Gộp Hàng)</h5>
+                            <pre><code>&lt;td rowspan="2"&gt;Nội dung gộp 2 hàng&lt;/td&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="attribute-group">
+                        <h4>📏 Border & Spacing</h4>
+                        <p>Các thuộc tính để tạo viền và khoảng cách:</p>
+                        
+                        <div class="attribute-example">
+                            <h5>Border</h5>
+                            <pre><code>&lt;table border="1"&gt;</code></pre>
+                        </div>
+                        
+                        <div class="attribute-example">
+                            <h5>Cellspacing & Cellpadding</h5>
+                            <pre><code>&lt;table cellspacing="10" cellpadding="5"&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>7. Best Practices (Thực Hành Tốt Nhất)</h3>
+                <div class="best-practices">
+                    <div class="practice-item">
+                        <h4>✅ Nên Làm (Do's)</h4>
+                        <ul>
+                            <li>Sử dụng &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt; để tổ chức bảng</li>
+                            <li>Luôn sử dụng &lt;th&gt; cho tiêu đề cột</li>
+                            <li>Thêm thuộc tính scope cho &lt;th&gt;</li>
+                            <li>Sử dụng &lt;caption&gt; để mô tả bảng</li>
+                            <li>Đảm bảo bảng responsive trên mobile</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <h4>❌ Không Nên Làm (Don'ts)</h4>
+                        <ul>
+                            <li>Không sử dụng bảng để layout trang web</li>
+                            <li>Không bỏ qua các thẻ semantic</li>
+                            <li>Không tạo bảng quá phức tạp</li>
+                            <li>Không sử dụng bảng cho dữ liệu không phù hợp</li>
+                            <li>Không quên thuộc tính alt cho accessibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h2>💻 Thực Hành (Practice)</h2>
+                
+                <div class="exercise">
+                    <h3>Bài Tập 1: Tạo Trang Web Với Lists & Tables</h3>
+                    <p><strong>Yêu cầu:</strong> Tạo trang web "Menu Nhà Hàng" với danh sách món ăn và bảng giá</p>
+                    
+                    <div class="exercise-content">
+                        <h4>Code HTML:</h4>
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Menu Nhà Hàng Việt Nam&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Menu Nhà Hàng Việt Nam&lt;/h1&gt;
+    
+    &lt;h2&gt;Món Khai Vị&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Gỏi cuốn tôm thịt&lt;/li&gt;
+        &lt;li&gt;Chả giò truyền thống&lt;/li&gt;
+        &lt;li&gt;Gỏi đu đủ tôm khô&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h2&gt;Món Chính&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Phở bò truyền thống&lt;/li&gt;
+        &lt;li&gt;Bún chả Hà Nội&lt;/li&gt;
+        &lt;li&gt;Cơm tấm Sài Gòn&lt;/li&gt;
+        &lt;li&gt;Bánh mì thịt nướng&lt;/li&gt;
+    &lt;/ol&gt;
+    
+    &lt;h2&gt;Bảng Giá&lt;/h2&gt;
+    &lt;table border="1"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Món Ăn&lt;/th&gt;
+                &lt;th&gt;Giá (VNĐ)&lt;/th&gt;
+                &lt;th&gt;Ghi Chú&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Gỏi cuốn tôm thịt&lt;/td&gt;
+                &lt;td&gt;45,000&lt;/td&gt;
+                &lt;td&gt;2 cuốn&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Phở bò truyền thống&lt;/td&gt;
+                &lt;td&gt;55,000&lt;/td&gt;
+                &lt;td&gt;Tô lớn&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Bún chả Hà Nội&lt;/td&gt;
+                &lt;td&gt;50,000&lt;/td&gt;
+                &lt;td&gt;Kèm rau sống&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Cơm tấm Sài Gòn&lt;/td&gt;
+                &lt;td&gt;65,000&lt;/td&gt;
+                &lt;td&gt;Đầy đủ món&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;tfoot&gt;
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;&lt;strong&gt;Tổng cộng&lt;/strong&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;strong&gt;215,000 VNĐ&lt;/strong&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tfoot&gt;
+    &lt;/table&gt;
+    
+    &lt;h2&gt;Thông Tin Liên Hệ&lt;/h2&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;Địa chỉ:&lt;/dt&gt;
+        &lt;dd&gt;123 Đường ABC, Quận 1, TP.HCM&lt;/dd&gt;
+        &lt;dt&gt;Điện thoại:&lt;/dt&gt;
+        &lt;dd&gt;0123-456-789&lt;/dd&gt;
+        &lt;dt&gt;Giờ mở cửa:&lt;/dt&gt;
+        &lt;dd&gt;7:00 - 22:00 (Thứ 2 - Chủ nhật)&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        
+                        <h4>Kết Quả Hiển Thị:</h4>
+                        <div class="result-preview">
+                            <h1 style="color: #2d3748; font-size: 2rem;">Menu Nhà Hàng Việt Nam</h1>
+                            
+                            <h2 style="color: #4a5568; font-size: 1.5rem;">Món Khai Vị</h2>
+                            <ul style="color: #4a5568;">
+                                <li>Gỏi cuốn tôm thịt</li>
+                                <li>Chả giò truyền thống</li>
+                                <li>Gỏi đu đủ tôm khô</li>
+                            </ul>
+                            
+                            <h2 style="color: #4a5568; font-size: 1.5rem;">Món Chính</h2>
+                            <ol style="color: #4a5568;">
+                                <li>Phở bò truyền thống</li>
+                                <li>Bún chả Hà Nội</li>
+                                <li>Cơm tấm Sài Gòn</li>
+                                <li>Bánh mì thịt nướng</li>
+                            </ol>
+                            
+                            <h2 style="color: #4a5568; font-size: 1.5rem;">Bảng Giá</h2>
+                            <table style="border-collapse: collapse; width: 100%; margin: 1rem 0;">
+                                <thead>
+                                    <tr style="background: #667eea; color: white;">
+                                        <th style="padding: 0.75rem; border: 1px solid #e2e8f0;">Món Ăn</th>
+                                        <th style="padding: 0.75rem; border: 1px solid #e2e8f0;">Giá (VNĐ)</th>
+                                        <th style="padding: 0.75rem; border: 1px solid #e2e8f0;">Ghi Chú</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Gỏi cuốn tôm thịt</td>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">45,000</td>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">2 cuốn</td>
+                                    </tr>
+                                    <tr style="background: #f7fafc;">
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Phở bò truyền thống</td>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">55,000</td>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Tô lớn</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Bún chả Hà Nội</td>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">50,000</td>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Kèm rau sống</td>
+                                    </tr>
+                                    <tr style="background: #f7fafc;">
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Cơm tấm Sài Gòn</td>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">65,000</td>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;">Đầy đủ món</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr style="background: #48bb78; color: white;">
+                                        <td colspan="2" style="padding: 0.75rem; border: 1px solid #e2e8f0;"><strong>Tổng cộng</strong></td>
+                                        <td style="padding: 0.75rem; border: 1px solid #e2e8f0;"><strong>215,000 VNĐ</strong></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            
+                            <h2 style="color: #4a5568; font-size: 1.5rem;">Thông Tin Liên Hệ</h2>
+                            <dl style="color: #4a5568;">
+                                <dt style="font-weight: bold; margin-top: 1rem;">Địa chỉ:</dt>
+                                <dd style="margin-left: 1rem;">123 Đường ABC, Quận 1, TP.HCM</dd>
+                                <dt style="font-weight: bold; margin-top: 1rem;">Điện thoại:</dt>
+                                <dd style="margin-left: 1rem;">0123-456-789</dd>
+                                <dt style="font-weight: bold; margin-top: 1rem;">Giờ mở cửa:</dt>
+                                <dd style="margin-left: 1rem;">7:00 - 22:00 (Thứ 2 - Chủ nhật)</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3>Bài Tập 2: Tạo Bảng Phức Tạp Với Colspan & Rowspan</h3>
+                    <p><strong>Yêu cầu:</strong> Tạo bảng lịch học với các thuộc tính colspan và rowspan</p>
+                    
+                    <div class="exercise-content">
+                        <h4>Gợi ý cấu trúc:</h4>
+                        <ul>
+                            <li>Sử dụng &lt;thead&gt; cho tiêu đề ngày trong tuần</li>
+                            <li>Sử dụng colspan cho các môn học kéo dài nhiều tiết</li>
+                            <li>Sử dụng rowspan cho các môn học chung</li>
+                            <li>Thêm màu sắc để phân biệt các môn học</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-section">
+                <h2>🧠 Kiểm Tra Kiến Thức (Knowledge Check)</h2>
+                
+                <div class="quiz">
+                    <h3>Câu Hỏi 1:</h3>
+                    <p>Thẻ nào được sử dụng để tạo danh sách có thứ tự?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> a) &lt;ul&gt;</label>
+                        <label><input type="radio" name="q1" value="b"> b) &lt;ol&gt;</label>
+                        <label><input type="radio" name="q1" value="c"> c) &lt;li&gt;</label>
+                        <label><input type="radio" name="q1" value="d"> d) &lt;dl&gt;</label>
+                    </div>
+                    <button onclick="checkAnswer('q1', 'b')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q1" class="result"></div>
+                </div>
+
+                <div class="quiz">
+                    <h3>Câu Hỏi 2:</h3>
+                    <p>Thuộc tính colspan có tác dụng gì?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> a) Gộp nhiều hàng thành một</label>
+                        <label><input type="radio" name="q2" value="b"> b) Gộp nhiều cột thành một</label>
+                        <label><input type="radio" name="q2" value="c"> c) Tạo viền cho ô</label>
+                        <label><input type="radio" name="q2" value="d"> d) Tạo khoảng cách giữa các ô</label>
+                    </div>
+                    <button onclick="checkAnswer('q2', 'b')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q2" class="result"></div>
+                </div>
+
+                <div class="quiz">
+                    <h3>Câu Hỏi 3:</h3>
+                    <p>Thẻ nào được sử dụng để tạo ô tiêu đề trong bảng?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="a"> a) &lt;td&gt;</label>
+                        <label><input type="radio" name="q3" value="b"> b) &lt;th&gt;</label>
+                        <label><input type="radio" name="q3" value="c"> c) &lt;tr&gt;</label>
+                        <label><input type="radio" name="q3" value="d"> d) &lt;thead&gt;</label>
+                    </div>
+                    <button onclick="checkAnswer('q3', 'b')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q3" class="result"></div>
+                </div>
+
+                <div class="quiz">
+                    <h3>Câu Hỏi 4:</h3>
+                    <p>Khi nào nên sử dụng danh sách mô tả (&lt;dl&gt;)?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="a"> a) Khi cần danh sách có thứ tự</label>
+                        <label><input type="radio" name="q4" value="b"> b) Khi cần danh sách không có thứ tự</label>
+                        <label><input type="radio" name="q4" value="c"> c) Khi cần liệt kê thuật ngữ và định nghĩa</label>
+                        <label><input type="radio" name="q4" value="d"> d) Khi cần tạo bảng dữ liệu</label>
+                    </div>
+                    <button onclick="checkAnswer('q4', 'c')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q4" class="result"></div>
+                </div>
+            </div>
+
+            <div class="summary-section">
+                <h2>📝 Tóm Tắt (Summary)</h2>
+                <ul>
+                    <li>&lt;ul&gt; tạo danh sách không có thứ tự với dấu chấm</li>
+                    <li>&lt;ol&gt; tạo danh sách có thứ tự với số</li>
+                    <li>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt; tạo danh sách mô tả</li>
+                    <li>&lt;table&gt; tạo bảng dữ liệu với các hàng và cột</li>
+                    <li>colspan gộp nhiều cột, rowspan gộp nhiều hàng</li>
+                    <li>Nên sử dụng semantic tags cho accessibility</li>
+                </ul>
+            </div>
+
+            <div class="next-lesson">
+                <h2>➡️ Bài Tiếp Theo</h2>
+                <p>Trong bài tiếp theo, chúng ta sẽ học về <strong>Forms & Inputs (Biểu Mẫu & Đầu Vào)</strong> - cách tạo form để thu thập dữ liệu từ người dùng với các loại input khác nhau.</p>
+                <a href="../06-forms-inputs/" class="btn-primary">Tiếp Tục Học</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 HTML & CSS Learning Hub - Created by ndyudev</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html> 

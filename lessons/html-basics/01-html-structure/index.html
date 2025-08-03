@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. HTML Structure - Cấu Trúc HTML Cơ Bản</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <link rel="stylesheet" href="../../assets/navigation.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>📝 HTML Structure - Cấu Trúc HTML</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">🏠 Trang Chủ</a></li>
+                <li><a href="../02-heading-tags/">Tiếp Theo: Heading Tags</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="lesson-content">
+            <h1 class="lesson-title">01. HTML Structure - Cấu Trúc HTML Cơ Bản</h1>
+            
+            <div class="learning-objectives">
+                <h2>🎯 Mục Tiêu Học Tập (Learning Objectives)</h2>
+                <ul>
+                    <li>Hiểu cấu trúc cơ bản của một trang HTML</li>
+                    <li>Biết cách sử dụng các thẻ HTML cơ bản</li>
+                    <li>Hiểu về DOCTYPE và HTML5</li>
+                    <li>Thực hành tạo trang HTML đầu tiên</li>
+                </ul>
+            </div>
+
+            <div class="theory-section">
+                <h2>📚 Lý Thuyết (Theory)</h2>
+                
+                <h3>1. HTML là gì? (What is HTML?)</h3>
+                <p><strong>HTML (HyperText Markup Language)</strong> là ngôn ngữ đánh dấu siêu văn bản, được sử dụng để tạo ra các trang web. HTML sử dụng các thẻ (tags) để định nghĩa cấu trúc và nội dung của trang web.</p>
+                
+                <h3>2. Cấu Trúc HTML Cơ Bản (Basic HTML Structure)</h3>
+                <div class="code-example">
+                    <h4>Ví dụ cấu trúc HTML cơ bản:</h4>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tiêu đề trang web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Nội dung trang web ở đây --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <h3>3. Giải Thích Các Thành Phần (Component Explanation)</h3>
+                <div class="component-grid">
+                    <div class="component">
+                        <h4>DOCTYPE Declaration</h4>
+                        <p><code>&lt;!DOCTYPE html&gt;</code> - Khai báo loại tài liệu HTML5</p>
+                        <p><em>Declares the document type as HTML5</em></p>
+                    </div>
+                    
+                    <div class="component">
+                        <h4>HTML Element</h4>
+                        <p><code>&lt;html lang="vi"&gt;</code> - Thẻ gốc của trang HTML</p>
+                        <p><em>The root element of the HTML document</em></p>
+                    </div>
+                    
+                    <div class="component">
+                        <h4>Head Section</h4>
+                        <p><code>&lt;head&gt;</code> - Chứa thông tin meta và cấu hình</p>
+                        <p><em>Contains meta information and configuration</em></p>
+                    </div>
+                    
+                    <div class="component">
+                        <h4>Body Section</h4>
+                        <p><code>&lt;body&gt;</code> - Chứa nội dung hiển thị</p>
+                        <p><em>Contains the visible content</em></p>
+                    </div>
+                </div>
+
+                <h3>4. Các Thẻ Meta Quan Trọng (Important Meta Tags)</h3>
+                <div class="meta-tags">
+                    <div class="meta-tag">
+                        <h4>Character Encoding</h4>
+                        <code>&lt;meta charset="UTF-8"&gt;</code>
+                        <p>Định nghĩa bộ ký tự cho trang web</p>
+                        <p><em>Defines the character encoding for the webpage</em></p>
+                    </div>
+                    
+                    <div class="meta-tag">
+                        <h4>Viewport</h4>
+                        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+                        <p>Đảm bảo trang web hiển thị đúng trên mobile</p>
+                        <p><em>Ensures proper display on mobile devices</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h2>💻 Thực Hành (Practice)</h2>
+                
+                <div class="exercise">
+                    <h3>Bài Tập 1: Tạo Trang HTML Đầu Tiên</h3>
+                    <p><strong>Yêu cầu:</strong> Tạo một trang HTML cơ bản với cấu trúc đầy đủ</p>
+                    
+                    <div class="exercise-content">
+                        <h4>Bước 1: Tạo file HTML</h4>
+                        <p>Tạo file <code>index.html</code> với nội dung sau:</p>
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Trang Web Đầu Tiên Của Tôi&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Chào mừng đến với trang web của tôi!&lt;/h1&gt;
+    &lt;p&gt;Đây là trang web HTML đầu tiên của tôi.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        
+                        <h4>Bước 2: Lưu và mở file</h4>
+                        <ul>
+                            <li>Lưu file với tên <code>index.html</code></li>
+                            <li>Mở file bằng trình duyệt web</li>
+                            <li>Quan sát kết quả hiển thị</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3>Bài Tập 2: Thêm Thông Tin Meta</h3>
+                    <p><strong>Yêu cầu:</strong> Thêm các thẻ meta để tối ưu SEO</p>
+                    
+                    <div class="exercise-content">
+                        <h4>Thêm vào phần &lt;head&gt;:</h4>
+                        <pre><code>&lt;meta name="description" content="Trang web học HTML CSS"&gt;
+&lt;meta name="keywords" content="HTML, CSS, Web Development"&gt;
+&lt;meta name="author" content="Tên của bạn"&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-section">
+                <h2>🧠 Kiểm Tra Kiến Thức (Knowledge Check)</h2>
+                
+                <div class="quiz">
+                    <h3>Câu Hỏi 1:</h3>
+                    <p>Thẻ nào là thẻ gốc của một trang HTML?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> a) &lt;head&gt;</label>
+                        <label><input type="radio" name="q1" value="b"> b) &lt;html&gt;</label>
+                        <label><input type="radio" name="q1" value="c"> c) &lt;body&gt;</label>
+                        <label><input type="radio" name="q1" value="d"> d) &lt;DOCTYPE&gt;</label>
+                    </div>
+                    <button onclick="checkAnswer('q1', 'b')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q1" class="result"></div>
+                </div>
+
+                <div class="quiz">
+                    <h3>Câu Hỏi 2:</h3>
+                    <p>Thẻ meta charset="UTF-8" có tác dụng gì?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> a) Định nghĩa tiêu đề trang</label>
+                        <label><input type="radio" name="q2" value="b"> b) Định nghĩa bộ ký tự</label>
+                        <label><input type="radio" name="q2" value="c"> c) Định nghĩa viewport</label>
+                        <label><input type="radio" name="q2" value="d"> d) Định nghĩa CSS</label>
+                    </div>
+                    <button onclick="checkAnswer('q2', 'b')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q2" class="result"></div>
+                </div>
+            </div>
+
+            <div class="summary-section">
+                <h2>📝 Tóm Tắt (Summary)</h2>
+                <ul>
+                    <li>HTML là ngôn ngữ đánh dấu để tạo trang web</li>
+                    <li>Cấu trúc HTML cơ bản gồm: DOCTYPE, html, head, body</li>
+                    <li>Thẻ meta quan trọng: charset, viewport, description</li>
+                    <li>Luôn sử dụng HTML5 với DOCTYPE html</li>
+                </ul>
+            </div>
+
+            <div class="next-lesson">
+                <h2>➡️ Bài Tiếp Theo</h2>
+                <p>Trong bài tiếp theo, chúng ta sẽ học về <strong>Heading Tags (Thẻ Tiêu Đề)</strong> - cách sử dụng các thẻ h1, h2, h3, h4, h5, h6 để tạo cấu trúc tiêu đề cho trang web.</p>
+                <a href="../02-heading-tags/" class="btn-primary">Tiếp Tục Học</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 HTML & CSS Learning Hub - Created by ndyudev</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
