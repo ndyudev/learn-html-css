@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06. Forms & Inputs - Biểu Mẫu & Đầu Vào</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <link rel="stylesheet" href="../../assets/navigation.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>📝 Forms & Inputs - Biểu Mẫu & Đầu Vào</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">🏠 Trang Chủ</a></li>
+                <li><a href="../05-lists-tables/">← Bài Trước</a></li>
+                <li><a href="../../lessons/css-basics/">Bài Tiếp →</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="lesson-content">
+            <h1 class="lesson-title">06. Forms & Inputs - Biểu Mẫu & Đầu Vào</h1>
+            
+            <div class="learning-objectives">
+                <h2>🎯 Mục Tiêu Học Tập</h2>
+                <ul>
+                    <li>Hiểu cách sử dụng thẻ &lt;form&gt; để tạo biểu mẫu</li>
+                    <li>Biết các loại input khác nhau: text, email, password, checkbox, radio</li>
+                    <li>Hiểu cách sử dụng &lt;label&gt;, &lt;fieldset&gt;, &lt;legend&gt;</li>
+                    <li>Thực hành tạo form đăng ký và đăng nhập hoàn chỉnh</li>
+                </ul>
+            </div>
+
+            <div class="theory-section">
+                <h2>📚 Lý Thuyết</h2>
+                
+                <h3>1. Form Cơ Bản (&lt;form&gt;)</h3>
+                <p><strong>Form</strong> được sử dụng để thu thập dữ liệu từ người dùng.</p>
+                
+                <div class="form-basics">
+                    <h4>📝 Cú Pháp Cơ Bản</h4>
+                    <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label for="username"&gt;Tên đăng nhập:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;
+    
+    &lt;label for="password"&gt;Mật khẩu:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;
+    
+    &lt;button type="submit"&gt;Đăng nhập&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+
+                <h3>2. Các Loại Input Cơ Bản</h3>
+                <div class="input-types">
+                    <div class="input-type">
+                        <h4>📝 Text Input</h4>
+                        <pre><code>&lt;input type="text" name="fullname" placeholder="Nhập họ tên"&gt;</code></pre>
+                    </div>
+                    
+                    <div class="input-type">
+                        <h4>📧 Email Input</h4>
+                        <pre><code>&lt;input type="email" name="email" placeholder="example@email.com"&gt;</code></pre>
+                    </div>
+                    
+                    <div class="input-type">
+                        <h4>🔒 Password Input</h4>
+                        <pre><code>&lt;input type="password" name="password" placeholder="Nhập mật khẩu"&gt;</code></pre>
+                    </div>
+                </div>
+
+                <h3>3. Checkbox & Radio Buttons</h3>
+                <div class="selection-inputs">
+                    <div class="selection-example">
+                        <h4>☑️ Checkbox (Chọn Nhiều)</h4>
+                        <pre><code>&lt;input type="checkbox" id="hobby1" name="hobbies" value="reading"&gt;
+&lt;label for="hobby1"&gt;Đọc sách&lt;/label&gt;</code></pre>
+                    </div>
+                    
+                    <div class="selection-example">
+                        <h4>🔘 Radio Buttons (Chọn Một)</h4>
+                        <pre><code>&lt;input type="radio" id="male" name="gender" value="male"&gt;
+&lt;label for="male"&gt;Nam&lt;/label&gt;</code></pre>
+                    </div>
+                </div>
+
+                <h3>4. Select & Textarea</h3>
+                <div class="advanced-inputs">
+                    <div class="advanced-example">
+                        <h4>📋 Select Dropdown</h4>
+                        <pre><code>&lt;select name="country"&gt;
+    &lt;option value=""&gt;Chọn quốc gia&lt;/option&gt;
+    &lt;option value="vn"&gt;Việt Nam&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                    </div>
+                    
+                    <div class="advanced-example">
+                        <h4>📝 Textarea</h4>
+                        <pre><code>&lt;textarea name="message" rows="4" cols="50" 
+    placeholder="Nhập tin nhắn của bạn..."&gt;&lt;/textarea&gt;</code></pre>
+                    </div>
+                </div>
+
+                <h3>5. Form Validation & Attributes</h3>
+                <div class="validation-examples">
+                    <div class="validation-example">
+                        <h4>✅ Required Fields</h4>
+                        <pre><code>&lt;input type="text" name="username" required&gt;</code></pre>
+                    </div>
+                    
+                    <div class="validation-example">
+                        <h4>📏 Min/Max Length</h4>
+                        <pre><code>&lt;input type="text" name="username" minlength="3" maxlength="20"&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h2>💻 Thực Hành</h2>
+                
+                <div class="exercise">
+                    <h3>Bài Tập: Tạo Form Đăng Ký</h3>
+                    <p>Tạo form đăng ký tài khoản với đầy đủ validation</p>
+                    
+                    <div class="exercise-content">
+                        <h4>Code HTML:</h4>
+                        <pre><code>&lt;form action="/register" method="post"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Thông Tin Cá Nhân&lt;/legend&gt;
+        
+        &lt;div&gt;
+            &lt;label for="fullname"&gt;Họ và tên:&lt;/label&gt;
+            &lt;input type="text" id="fullname" name="fullname" required&gt;
+        &lt;/div&gt;
+        
+        &lt;div&gt;
+            &lt;label for="email"&gt;Email:&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+    
+    &lt;button type="submit"&gt;Đăng Ký&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-section">
+                <h2>🧠 Kiểm Tra Kiến Thức</h2>
+                
+                <div class="quiz">
+                    <h3>Câu Hỏi 1:</h3>
+                    <p>Thuộc tính nào được sử dụng để bắt buộc người dùng nhập dữ liệu?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> a) validate</label>
+                        <label><input type="radio" name="q1" value="b"> b) required</label>
+                        <label><input type="radio" name="q1" value="c"> c) mandatory</label>
+                        <label><input type="radio" name="q1" value="d"> d) must</label>
+                    </div>
+                    <button onclick="checkAnswer('q1', 'b')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q1" class="result"></div>
+                </div>
+
+                <div class="quiz">
+                    <h3>Câu Hỏi 2:</h3>
+                    <p>Thẻ nào được sử dụng để nhóm các trường liên quan trong form?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> a) &lt;group&gt;</label>
+                        <label><input type="radio" name="q2" value="b"> b) &lt;fieldset&gt;</label>
+                        <label><input type="radio" name="q2" value="c"> c) &lt;section&gt;</label>
+                        <label><input type="radio" name="q2" value="d"> d) &lt;div&gt;</label>
+                    </div>
+                    <button onclick="checkAnswer('q2', 'b')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q2" class="result"></div>
+                </div>
+            </div>
+
+            <div class="summary-section">
+                <h2>📝 Tóm Tắt</h2>
+                <ul>
+                    <li>&lt;form&gt; tạo biểu mẫu để thu thập dữ liệu</li>
+                    <li>HTML5 cung cấp nhiều loại input: text, email, password, number, date</li>
+                    <li>Checkbox cho phép chọn nhiều, radio chỉ chọn một</li>
+                    <li>Fieldset nhóm các trường liên quan</li>
+                    <li>Validation attributes: required, minlength, maxlength, pattern</li>
+                    <li>Luôn sử dụng label cho accessibility</li>
+                </ul>
+            </div>
+
+            <div class="next-lesson">
+                <h2>➡️ Bài Tiếp Theo</h2>
+                <p>Chúc mừng! Bạn đã hoàn thành module HTML Basics. Tiếp theo chúng ta sẽ học về <strong>CSS Basics</strong>.</p>
+                <a href="../../lessons/css-basics/" class="btn-primary">Bắt Đầu Học CSS</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 HTML & CSS Learning Hub - Created by ndyudev</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html> 

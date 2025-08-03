@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. Heading Tags - Thẻ Tiêu Đề HTML</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <link rel="stylesheet" href="../../assets/navigation.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>📝 Heading Tags - Thẻ Tiêu Đề</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">🏠 Trang Chủ</a></li>
+                <li><a href="../01-html-structure/">← Bài Trước</a></li>
+                <li><a href="../03-paragraph-text/">Bài Tiếp →</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="lesson-content">
+            <h1 class="lesson-title">02. Heading Tags - Thẻ Tiêu Đề HTML</h1>
+            
+            <div class="learning-objectives">
+                <h2>🎯 Mục Tiêu Học Tập (Learning Objectives)</h2>
+                <ul>
+                    <li>Hiểu về 6 cấp độ heading (h1-h6)</li>
+                    <li>Biết cách sử dụng heading để tạo cấu trúc trang web</li>
+                    <li>Hiểu về SEO và semantic HTML</li>
+                    <li>Thực hành tạo trang web với heading hierarchy</li>
+                </ul>
+            </div>
+
+            <div class="theory-section">
+                <h2>📚 Lý Thuyết (Theory)</h2>
+                
+                <h3>1. Heading Tags là gì? (What are Heading Tags?)</h3>
+                <p><strong>Heading Tags</strong> là các thẻ HTML được sử dụng để tạo tiêu đề cho các phần khác nhau của trang web. HTML cung cấp 6 cấp độ heading từ h1 đến h6, trong đó h1 là quan trọng nhất và h6 là ít quan trọng nhất.</p>
+                
+                <div class="heading-hierarchy">
+                    <h3>2. Cấu Trúc Heading Hierarchy (Heading Hierarchy Structure)</h3>
+                    <div class="hierarchy-visual">
+                        <div class="h1-example">
+                            <h1>H1 - Tiêu đề chính (Main Heading)</h1>
+                            <p>Thẻ h1 thường chỉ xuất hiện một lần trong trang, đại diện cho tiêu đề chính của trang web.</p>
+                        </div>
+                        
+                        <div class="h2-example">
+                            <h2>H2 - Tiêu đề phụ (Sub Heading)</h2>
+                            <p>Thẻ h2 được sử dụng cho các tiêu đề phụ, phân chia nội dung chính.</p>
+                        </div>
+                        
+                        <div class="h3-example">
+                            <h3>H3 - Tiêu đề nhỏ (Small Heading)</h3>
+                            <p>Thẻ h3 cho các tiêu đề nhỏ hơn, chi tiết hơn.</p>
+                        </div>
+                        
+                        <div class="h4-example">
+                            <h4>H4 - Tiêu đề chi tiết (Detail Heading)</h4>
+                            <p>Thẻ h4 cho các tiêu đề chi tiết.</p>
+                        </div>
+                        
+                        <div class="h5-example">
+                            <h5>H5 - Tiêu đề rất nhỏ (Very Small Heading)</h5>
+                            <p>Thẻ h5 cho các tiêu đề rất nhỏ.</p>
+                        </div>
+                        
+                        <div class="h6-example">
+                            <h6>H6 - Tiêu đề nhỏ nhất (Smallest Heading)</h6>
+                            <p>Thẻ h6 cho các tiêu đề nhỏ nhất.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>3. Quy Tắc Sử Dụng Heading (Heading Usage Rules)</h3>
+                <div class="rules-grid">
+                    <div class="rule">
+                        <h4>✅ Quy Tắc Đúng (Correct Rules)</h4>
+                        <ul>
+                            <li>Chỉ sử dụng một thẻ h1 trong mỗi trang</li>
+                            <li>Sử dụng heading theo thứ tự logic (h1 → h2 → h3)</li>
+                            <li>Không bỏ qua cấp độ heading (không dùng h1 rồi nhảy xuống h4)</li>
+                            <li>Sử dụng heading để tạo cấu trúc nội dung</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule">
+                        <h4>❌ Quy Tắc Sai (Incorrect Rules)</h4>
+                        <ul>
+                            <li>Sử dụng nhiều h1 trong một trang</li>
+                            <li>Bỏ qua cấp độ heading (h1 → h4)</li>
+                            <li>Sử dụng heading chỉ để tạo style</li>
+                            <li>Không có cấu trúc logic</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>4. SEO và Semantic HTML</h3>
+                <p><strong>SEO (Search Engine Optimization)</strong> là quá trình tối ưu hóa trang web để có thứ hạng cao hơn trên các công cụ tìm kiếm. Heading tags đóng vai trò quan trọng trong SEO:</p>
+                
+                <div class="seo-benefits">
+                    <div class="seo-item">
+                        <h4>🔍 Tìm Kiếm (Search)</h4>
+                        <p>Search engines sử dụng heading để hiểu cấu trúc và nội dung trang web</p>
+                    </div>
+                    
+                    <div class="seo-item">
+                        <h4>📊 Accessibility (Khả Năng Truy Cập)</h4>
+                        <p>Screen readers sử dụng heading để điều hướng cho người khuyết tật</p>
+                    </div>
+                    
+                    <div class="seo-item">
+                        <h4>📱 User Experience (Trải Nghiệm Người Dùng)</h4>
+                        <p>Heading giúp người dùng nhanh chóng hiểu nội dung trang web</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h2>💻 Thực Hành (Practice)</h2>
+                
+                <div class="exercise">
+                    <h3>Bài Tập 1: Tạo Trang Web Với Heading Hierarchy</h3>
+                    <p><strong>Yêu cầu:</strong> Tạo một trang web về "Công Nghệ Web" với cấu trúc heading đúng</p>
+                    
+                    <div class="exercise-content">
+                        <h4>Code HTML:</h4>
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Công Nghệ Web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Công Nghệ Web Hiện Đại&lt;/h1&gt;
+    
+    &lt;h2&gt;HTML - Ngôn Ngữ Đánh Dấu&lt;/h2&gt;
+    &lt;p&gt;HTML là ngôn ngữ cơ bản để tạo trang web.&lt;/p&gt;
+    
+    &lt;h3&gt;Cấu Trúc HTML&lt;/h3&gt;
+    &lt;p&gt;HTML sử dụng các thẻ để định nghĩa cấu trúc.&lt;/p&gt;
+    
+    &lt;h3&gt;Semantic HTML&lt;/h3&gt;
+    &lt;p&gt;HTML có ngữ nghĩa giúp SEO tốt hơn.&lt;/p&gt;
+    
+    &lt;h2&gt;CSS - Ngôn Ngữ Tạo Kiểu&lt;/h2&gt;
+    &lt;p&gt;CSS được sử dụng để tạo style cho trang web.&lt;/p&gt;
+    
+    &lt;h3&gt;CSS Selectors&lt;/h3&gt;
+    &lt;p&gt;CSS selectors giúp chọn phần tử để style.&lt;/p&gt;
+    
+    &lt;h3&gt;CSS Layout&lt;/h3&gt;
+    &lt;p&gt;CSS layout giúp sắp xếp các phần tử.&lt;/p&gt;
+    
+    &lt;h2&gt;JavaScript - Ngôn Ngữ Lập Trình&lt;/h2&gt;
+    &lt;p&gt;JavaScript tạo tính tương tác cho trang web.&lt;/p&gt;
+    
+    &lt;h3&gt;DOM Manipulation&lt;/h3&gt;
+    &lt;p&gt;JavaScript có thể thay đổi nội dung trang web.&lt;/p&gt;
+    
+    &lt;h3&gt;Event Handling&lt;/h3&gt;
+    &lt;p&gt;JavaScript xử lý các sự kiện người dùng.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        
+                        <h4>Kết Quả Hiển Thị:</h4>
+                        <div class="result-preview">
+                            <h1 style="color: #2d3748; font-size: 2rem;">Công Nghệ Web Hiện Đại</h1>
+                            
+                            <h2 style="color: #4a5568; font-size: 1.5rem;">HTML - Ngôn Ngữ Đánh Dấu</h2>
+                            <p>HTML là ngôn ngữ cơ bản để tạo trang web.</p>
+                            
+                            <h3 style="color: #718096; font-size: 1.2rem;">Cấu Trúc HTML</h3>
+                            <p>HTML sử dụng các thẻ để định nghĩa cấu trúc.</p>
+                            
+                            <h3 style="color: #718096; font-size: 1.2rem;">Semantic HTML</h3>
+                            <p>HTML có ngữ nghĩa giúp SEO tốt hơn.</p>
+                            
+                            <h2 style="color: #4a5568; font-size: 1.5rem;">CSS - Ngôn Ngữ Tạo Kiểu</h2>
+                            <p>CSS được sử dụng để tạo style cho trang web.</p>
+                            
+                            <h2 style="color: #4a5568; font-size: 1.5rem;">JavaScript - Ngôn Ngữ Lập Trình</h2>
+                            <p>JavaScript tạo tính tương tác cho trang web.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3>Bài Tập 2: Tạo Trang Blog Với Heading</h3>
+                    <p><strong>Yêu cầu:</strong> Tạo trang blog về "Du Lịch Việt Nam" với cấu trúc heading phù hợp</p>
+                    
+                    <div class="exercise-content">
+                        <h4>Gợi Ý cấu trúc:</h4>
+                        <ul>
+                            <li>H1: Tiêu đề chính "Du Lịch Việt Nam"</li>
+                            <li>H2: Các vùng miền (Miền Bắc, Miền Trung, Miền Nam)</li>
+                            <li>H3: Các tỉnh thành trong mỗi vùng</li>
+                            <li>H4: Các địa điểm du lịch cụ thể</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-section">
+                <h2>🧠 Kiểm Tra Kiến Thức (Knowledge Check)</h2>
+                
+                <div class="quiz">
+                    <h3>Câu Hỏi 1:</h3>
+                    <p>Thẻ heading nào quan trọng nhất trong một trang HTML?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> a) h2</label>
+                        <label><input type="radio" name="q1" value="b"> b) h1</label>
+                        <label><input type="radio" name="q1" value="c"> c) h3</label>
+                        <label><input type="radio" name="q1" value="d"> d) h6</label>
+                    </div>
+                    <button onclick="checkAnswer('q1', 'b')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q1" class="result"></div>
+                </div>
+
+                <div class="quiz">
+                    <h3>Câu Hỏi 2:</h3>
+                    <p>Quy tắc nào sau đây là đúng khi sử dụng heading?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> a) Có thể sử dụng nhiều h1 trong một trang</label>
+                        <label><input type="radio" name="q2" value="b"> b) Có thể bỏ qua cấp độ heading (h1 → h4)</label>
+                        <label><input type="radio" name="q2" value="c"> c) Sử dụng heading theo thứ tự logic</label>
+                        <label><input type="radio" name="q2" value="d"> d) Sử dụng heading chỉ để tạo style</label>
+                    </div>
+                    <button onclick="checkAnswer('q2', 'c')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q2" class="result"></div>
+                </div>
+
+                <div class="quiz">
+                    <h3>Câu Hỏi 3:</h3>
+                    <p>Heading tags có vai trò gì trong SEO?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="a"> a) Chỉ để tạo style cho trang web</label>
+                        <label><input type="radio" name="q3" value="b"> b) Giúp search engines hiểu cấu trúc trang web</label>
+                        <label><input type="radio" name="q3" value="c"> c) Chỉ để người dùng dễ đọc</label>
+                        <label><input type="radio" name="q3" value="d"> d) Không có vai trò gì trong SEO</label>
+                    </div>
+                    <button onclick="checkAnswer('q3', 'b')" class="btn-check">Kiểm Tra</button>
+                    <div id="result-q3" class="result"></div>
+                </div>
+            </div>
+
+            <div class="summary-section">
+                <h2>📝 Tóm Tắt (Summary)</h2>
+                <ul>
+                    <li>HTML có 6 cấp độ heading từ h1 đến h6</li>
+                    <li>H1 là quan trọng nhất và chỉ nên có một trong mỗi trang</li>
+                    <li>Sử dụng heading theo thứ tự logic và không bỏ qua cấp độ</li>
+                    <li>Heading tags quan trọng cho SEO và accessibility</li>
+                    <li>Heading giúp tạo cấu trúc và tổ chức nội dung trang web</li>
+                </ul>
+            </div>
+
+            <div class="next-lesson">
+                <h2>➡️ Bài Tiếp Theo</h2>
+                <p>Trong bài tiếp theo, chúng ta sẽ học về <strong>Paragraph & Text Tags (Thẻ Đoạn Văn & Văn Bản)</strong> - cách sử dụng các thẻ p, span, strong, em, và các thẻ văn bản khác.</p>
+                <a href="../03-paragraph-text/" class="btn-primary">Tiếp Tục Học</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 HTML & CSS Learning Hub - Created by ndyudev</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html> 
